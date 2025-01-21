@@ -1,0 +1,59 @@
+@charset "UTF-8";
+.word-lists {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  padding: 5px;
+}
+
+.word-list {
+  display: flex;
+  flex-direction: column;
+  border: solid 1px #EB4682;
+  border-radius: 15px;
+  padding: 5px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+.info .description::before {
+  content: "記事: ";
+}
+.info .url::before {
+  content: "url: ";
+}
+.info .updated-at::before {
+  content: "データベース更新日: ";
+}
+
+.words {
+  display: grid;
+}
+
+.word {
+  display: grid;
+  grid-template-columns: minmax(180px, 200px) 1fr;
+  border: solid 1px #2887FF;
+  border-radius: 15px;
+}
+.word .en {
+  font-size: 160%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: solid 0.5px #2887FF;
+}
+.word .meaning {
+  padding: 2px 7px;
+}
+.word .meaning > .ja::before {
+  content: "";
+}
+.word .meaning > .example::before {
+  content: "　";
+}/*# sourceMappingURL=words.css.map */

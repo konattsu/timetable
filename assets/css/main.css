@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 160%;
+  font-size: 17px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1f1f1f;
+  color: #eee;
+  display: flex;
+  justify-content: center;
+}
+
+.all-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-width: 1000px;
+}
+
+h1 {
+  font-size: 2.5em;
+  text-align: center;
+}
+
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+}/*# sourceMappingURL=main.css.map */

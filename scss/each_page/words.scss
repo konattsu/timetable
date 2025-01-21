@@ -1,0 +1,75 @@
+// p {
+//     word-break: break-all;
+//     overflow-wrap: break-word;
+//     word-wrap: break-word;
+//     line-break: anywhere;
+//     white-space: pre-wrap;
+//     white-space: break-spaces;
+// }
+
+.word-lists {
+    display: flex;
+    flex-direction: column;
+
+    gap: 100px;
+    padding: 5px;
+}
+
+.word-list {
+    display: flex;
+    flex-direction: column;
+
+    border: solid 1px #EB4682;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+
+    .description::before {
+        content: "記事: ";
+    }
+    .url::before {
+        content: "url: ";
+    }
+    .updated-at::before {
+        content: "データベース更新日: ";
+    }
+}
+
+.words {
+    display: grid;
+}
+
+// 名前空間が知らずのうちに汚染されるのを防ぐために、wordからの相対パスを使用
+.word {
+    display: grid;
+    grid-template-columns: minmax(180px, 200px) 1fr;
+
+    border: solid 1px #2887FF;
+    border-radius: 15px;
+
+    .en {
+        font-size: 160%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-right: solid 0.5px #2887FF;
+    }
+
+    .meaning {
+        padding: 2px 7px;
+
+        &>.ja::before {
+            content: "";
+        }
+        &>.example::before {
+            content: "　";
+        }
+    }
+}
